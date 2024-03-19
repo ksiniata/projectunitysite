@@ -1,0 +1,341 @@
+/* устанавливаем шрифт для всего документа */
+body {
+    font-family: 'Raleway', sans-serif;
+    /* убираем отступы от краёв экрана, которые были по умолчанию */
+    margin: 0;
+    padding: 0;
+}
+
+/* задаем цвет фона, цвет текста, и отступы для шапки */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999; /* Выше остальных элементов */
+    transition: all 0.5s ease-in-out; /* добавляем анимацию transition */
+}
+
+header.hidden {
+    transform: translateY(-100%); /* перемещаем навигацию вверх за границу экрана */
+}
+
+/* задаем отступы для навигации */
+nav {
+    margin: 0;
+    padding: 0;
+    /* центрируем навигацию по горизонтали и задаем отступы сверху и снизу */
+    margin: 20px auto;
+}
+
+/* убираем отступы и маркеры для элементов списка навигации */
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* определяем стиль для каждого элемента списка навигации и задаем отступ справа */
+nav ul li {
+    display: inline-block;
+    margin-right: 0px;
+    color: #fff;
+}
+
+/* убираем отступ справа для последнего элемента списка навигации */
+nav ul li:last-child {
+    margin-right: 0;
+}
+
+/* задаем цвет и убираем подчеркивание для ссылок в навигации */
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 12px;
+    padding-inline: 15px;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 15px;
+    transition: background-color 0.2s ease;
+    margin: -5px;    
+}
+
+nav ul li a:hover {
+    background-color: #414141;
+}
+
+/* стили для логотипа в навигационной панели */
+.navbar-brand {
+    font-family: 'Unbounded', cursive;
+    padding: 15px 15px;
+    margin-right: 50px;
+    font-size: 22px;
+    font-weight: bold;
+    color: #ffffff;
+    text-decoration: none; /* отмена подчеркивания ссылки */
+    transition: text-shadow 0.5s ease;
+}
+
+.navbar-brand:hover{
+    /* это прикольный эффект свечения */
+    /* text-shadow: 0px 0px 10px #fff, 0px 0px 20px #fff, 0px 0px 30px #fff, 0px 0px 40px #ff7f00, 0px 0px 70px #ff7f00, 0px 0px 80px #ff7f00, 0px 0px 100px #ff7f00, 0px 0px 150px #ff7f00;*/
+    /* это тот же эффект, но поменьше и более тёплый */
+    /* text-shadow: 0 0 10px #ff0, 0 0 20px #ff0, 0 0 30px #ff0, 0 0 40px #f00, 0 0 70px #f00, 0 0 80px #f00, 0 0 100px #f00, 0 0 150px #f00;*/
+    /* это тоже свечение, но нейтральных тонов*/
+    text-shadow: 0 0 0.4rem rgba(255, 255, 255, 0.7), 0 0 1.2rem rgba(255, 255, 255, 0.5), 0 0 2.2rem rgba(255, 255, 255, 0.3), 0 0 4rem rgba(255, 255, 255, 0.1);
+}
+
+/* стили для списка ссылок в навигационной панели */
+.nav-links {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* задаем отступы для основного содержимого страницы */
+main {
+    padding: 20px;
+}
+
+/* задаем цвет текста, максимальную ширину, отступ сверху и снизу, цвет фона, скругление углов для секции */
+section {
+    color: rgb(0, 0, 0);
+    max-width: 800px;
+    margin: 10px auto;
+    padding: 20px;
+    background-color: transparent;
+    border-radius: 25px;
+}
+
+section h2 {
+    margin-top: 30px;
+}
+
+section:first-of-type:not(.exclude-first) {
+    margin-top: 120px;
+}
+
+section:last-child {
+    margin-bottom: 80px;
+}
+
+/* это класс, на случай если вам нужна секция с фоном. задаем цвет текста, максимальную ширину, отступ сверху и снизу, прозрачность фона для секции без фона */
+.gray-section {
+    color: rgb(0, 0, 0);
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #f5f5f5;
+}
+
+/* задаем стиль для заголовков первого уровня */
+h1 {
+    font-family: 'Unbounded', cursive;
+    margin-top: 0;
+    margin: 0 auto;
+    margin-bottom: 45px;
+    font-weight: normal;
+    font-size: 28px;
+    max-width: 800px;
+}
+
+
+
+/* задаем стиль для заголовков второго уровня */
+h2 {
+    font-family: 'Unbounded', cursive;
+    margin-top: 45px;
+    margin-bottom: 30px;
+    font-weight: normal;
+    font-size: 22px;
+}
+
+.subtitle {
+    margin-left: 10px;
+}
+
+/* убираем отступы и маркеры для списков */
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* стили списков */
+li{
+    line-height: 2;
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+/* стили для футера */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    overflow: hidden;
+    object-fit: cover;
+}
+
+/* стили для текста внутри футера */
+.footer-text{
+    text-align: center;
+}
+
+/* стили для изображений */
+img {
+    border-radius: 25px;
+    display: block;
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+/* стили для абзацев */
+p {
+    line-height: 1.8; /* межстрочный интервал внутри абзаца */
+    text-align: justify; /* выравнивание текста по ширине */
+    margin: 10px auto; /* первым параметров можно регулировать промежутки между абзацами */
+}
+
+.lesson-block {
+    color: rgb(0, 0, 0);
+    max-width: 800px;
+    box-sizing: border-box;
+    margin: 20px auto;
+    padding: 20px;
+    padding-inline: 30px;
+    background-color: #f5f5f5;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 25px;
+    text-align: center;
+    height: 85px;
+}
+
+.lesson-block h2{
+    font-family: 'Unbounded', cursive;
+    margin: 0px;
+    font-weight: normal;
+    font-size: 22px;
+    text-align: left;
+}
+
+.lesson-block h1{
+    font-family: 'Unbounded', cursive;
+    margin: 0px;
+    font-weight: normal;
+    font-size: 26px;
+    text-align: left;
+}
+
+.lesson-block a{
+    font-family: 'Unbounded', cursive;
+
+    /*это выравнивалки текста*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 10px;
+    padding-inline: 15px;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 15px;
+    transition: background-color 0.2s ease;
+}
+
+.lesson-block a:hover{
+    background-color: #000000;
+}
+
+.code-block {
+    position: relative; /* добавлено свойство position */
+    font-family: 'Courier New', Courier, monospace;
+    color: #ffffff;
+    width: 600px;
+    border-radius: 25px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background-color: #1a1a1a;
+    padding: 35px 5px 5px;
+    margin: 10px auto;
+    overflow: -moz-hidden-unscrollable;
+}
+
+.code-block:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 30px;
+    background-color: #4e4e4e;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+  }
+  
+  .code-block:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 10px;
+    left: 15px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #ff5f56;
+    box-shadow: 18px 0 0 0 #ffbd2e, 36px 0 0 0 #2ecc40;
+  }
+
+.code-block xmp{
+    font-family: 'Courier New', Courier, monospace;
+    margin-left: 20px;
+    white-space: pre-wrap;
+    overflow-wrap: break-word;
+}
+
+.title{
+    font-size: 35px;
+}
+
+.tip-block{
+    max-width: 500px;
+    padding: 30px;
+    color: white;
+}
+
+#background-div {
+    background-repeat: no-repeat;
+    background-position: center center; /* изначальное положение изображения */
+}
+  
+
+/* Применение стилей к скроллбару веб-кита */
+::-webkit-scrollbar {
+    width: 10px; /* Ширина скроллбара */
+  }
+  
+  /* Стилизация трека (фоновая область скроллбара) */
+  ::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+  }
+  
+  /* Стилизация ползунка (интерактивная область скроллбара) */
+  ::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 5px;
+  }
+  
+  /* Изменение цвета ползунка при наведении */
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+  }
+  
